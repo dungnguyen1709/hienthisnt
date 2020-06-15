@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function isPrime(value) {
+        if (value < 2)
+            return false;
+            for ( i = 2; i < Math.sqrt(value); i++) {
+                if ( value % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function  display(quantity) {
+        let count = 0;
+        let value = 1;
+        while (count < quantity) {
+            if (isPrime(value) ==  true) {
+                count++;
+                document.write(value + " ");
+            }
+            value++;
+        }
+
+        }
+        display(20);
+
+</script>
+</body>
+</html>
